@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html dir="ltr"> <!-- -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+  </head>
+
+  <body id="setupBody">
+    <script>
+      function saveWifi(){
+        s1 = document.getElementById("wifiInput").value;
+        s1split = s1.split(".");
+        if(s1split.length == 4){
+          //Checks if input values are numbers and within permissable range // 10.x.x.x , 172.(16-31).x.x , 192.168.x.x
+          if(s1split[0]>=0 && s1split[0]<=255 && s1split[1]>=0 && s1split[1]<=255 && s1split[2]>=0 && s1split[2]<=255 && s1split[3]>=0 && s1split[3]<=255){
+            //Checks for addresses that should not be allowed to connect to, like: broadcast addresses(255.255.255.255, 0.0.0.0), loopback addresses (127.0.0.0-127.255.255.255)
+            if(s1=="255.255.255.255" || s1=="0.0.0.0" || s1split[0]=="127"){
+              parent.liveLanguage(1);
+            }else{localStorage.setItem("sensorBoxAddress",s1); parent.liveLanguage(0);}
+          }else{parent.liveLanguage(3);}
+        }else{parent.liveLanguage(2);}
+
+        //console.log(localStorage.sensorBoxAddress);
+      }
+      function showThis(){
+        parent.liveLanguage(4);
+      }
+    </script>
+    <div class="middle">
+    <div class="outer">
+    <div class="row">
+      <div class="col-4">
+        <div class="list-group" id="list-tab">
+          <input id="wifiInput"></input><p id="inputDesc">Input the address of your local Sensor Box</p>
+        </div>
+        <button id="connectButton" onclick='saveWifi()'>Connect</button>
+        <button id="checkButton" onclick='showThis()'>Check Current Address</button>
+        <p id="wrnMsg"></p>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>

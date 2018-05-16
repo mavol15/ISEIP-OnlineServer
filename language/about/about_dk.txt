@@ -1,0 +1,6 @@
+        <article id="main-col">
+          <h2>Om</h2>
+          <p>
+	    Ja, det er saa den danske "Om" side. Den er ikke lige blevet oversat endnu, men det bliver den maaske engang!
+          </p>
+        </article>

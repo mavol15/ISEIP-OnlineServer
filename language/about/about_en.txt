@@ -1,0 +1,56 @@
+        <article id="main-col">
+          <h2>About</h2>
+          <p>
+            This page is designed
+            This platform is part of 2IMPREZS - a project funded by the European Union, that aims to reduce CO2 emissions by reducing energy consumption in existing schools in the North Sea Region.</br>
+            The purpose of the platform is to encourage energy saving behaviour and guide decision makers towards better technologies.</br>
+            However, we also wish to keep the quality of your study environment in mind. This platform comes with a small sensor box that measures some key environmental factors that can help you improve your study environment.</br>
+          </p>
+          <h1>Enhancing your study environment</h1>
+          <p>
+            Schools are first and foremost institutions of learning. Any initiative towards betterment must start with education as the primary goal.</br></br>
+            <h3>Lighting</h3></br></br>
+            ***
+            <h3>Temperature</h3></br></br>
+            ***
+            <h3>Air Quality</sub></h3></br></br>
+            ***CO2/VOCs***
+            When you exhale you release CO<sub>2</sub>(Carbon Dioxide) to the air. In a closed classroom this CO<sub>2</sub> builds up over time.</br></br>
+            <b>Short story</b>: when the CO<sub>2</sub> concentration rises, your focus falter.</br></br>
+
+            <div class="dark">
+              <!--Long Story-->
+              <b>Long story</b>:
+              Recent studies have linked increased levels of room CO<sub>2</sub> to decreases in cognition, particularily cognitive fields used in learning. One such study<sup>1</sup> from Harvard School of Public Health tested cognitive abilities of adults in a setting representative of Conventional [high concentrations of volatile organic compounds (VOCs)] and Green (low concentrations of VOCs) office buildings, found that on average cognitive scores were <b>61-101%</b> higher in buildings with low CO<sub>2</sub> and VOCs. <br><br>
+
+              A study from the State University of New York Department of Psychiatry and Behavioral Science<sup>2</sup> found that adults exposed to different levels of CO<sub>2</sub> (600/1000/2500 ppm) had a significant loss in some fields of cognition at increased levels of CO<sub>2</sub>.
+            </p>
+              <div>
+                <img src="./img/Cognitive_score_study.png"></img>
+                <p>
+                  <b>Figure 1:</b> Impact of CO<sub>2</sub> on human cognitive performance </br><i>(from Satish U, et al - Environmental Health Perspectives | volume 120 | number 12 | December 2012, Page 1675)</i>
+                </p>
+              </div>
+
+            </div>
+            <div>
+              <p class="below_image">
+                <b>Litterature:</b></br></br>
+                Allen, J.; MacNaughton, P.; Satish, U.; Santanam, S.; Vallarino, J.; Spengler, J. Associations of Cognitive Function Scores with Carbon Dioxide, Ventilation, and Volatile Organic Compound Exposures in Office Workers: A Controlled Exposure Study of Green and Conventional Office Environments. Environ Health Perspect; doi:10.1289/ehp.1510037</br></br>
+                Satish U, Mendell MJ, Shekhar K, Hotchi T, Sullivan D, Streufert S, et al. 2012. Is CO2 an indoor pollutant? Direct effects of Low-to-moderate CO2 concentrations on human decision-making performance. Environ Health Perspect 120 1671 1677, doi:10.1289/ehp.1104789</br></br>
+              </p>
+            </div>
+        </article>
+
+        <aside id="sidebar">
+          <div class="dark">
+          <h3>About 2imprezs</h3>
+          <p>
+            Most schools in the North Sea Region were built in more careless times, they have a high and forever more costly energy consumption that is not in line with today's CO2 reduction emission policies. </br>
+            2IMPREZS will stimulate change in the current situation by fostering both behavioural and technical efficient energy saving measures in existing schools, reducing energy consumption and thus reducing CO2 emissions. For the first time, this project will tackle the whole spectrum of energy efficiency measures: the behavioural, the technical and the financial approaches instead of focusing on one specific field.</br>
+            Based on active participation and initiatives of school stakeholders (teachers, students, management), as well as on the project partners' experiences, 2IMPREZS will create a joint energy saving programme through Energy Challenges in schools and an innovative decision making model, developed, tested and validated incorporating cost-effective educational, technical and financial measures. </br>
+            By reaching schools and experts throughout the NSR, 2IMPREZS will be able to collect and share experiences but also develop an energy saving programme compiling measures that are proved efficient in various settings.</br>
+            The implementation of the project comprehensive transnational strategy will aim to reach 30% energy savings in 141 schools in the North Sea Region representing an emission reduction of 7320 tonnes of CO2 and transform at least 4 schools into nearly zero-energy buildings.</br>
+          </p>
+          </div>
+        </aside>

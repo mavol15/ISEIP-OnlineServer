@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"> <!-- -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./css/style.css">   <!--use stylesheet ./css/style.css-->
+    <!-- Load c3.css -->
+		<link href="stylesheets/c3.css" rel="stylesheet" type="text/css">
+
+		<!-- Load d3.js and c3.js -->
+		<script src="js/d3.v3.min.js" charset="utf-8"></script>
+		<script src="js/c3.min.js"></script>
+
+		<!-- Load papaparse.js -->
+		<script src="js/papaparse.min.js"></script>
+
+
+  </head>
+
+  <body id="dataBody">
+    <script type="text/javascript" src="js/create-graph.js"></script> <!-- create c3 graph -->
+    <br><br><br>
+
+    <div class="container">
+      <div id="chart"></div>
+
+
+    </div>
+    <div class="cont"></div>
+    <div class="container">
+      <button id="button1h" onclick="parseData('TYPE=RANGE&DATA=CTH&RANGE=1H');">1 hour</button>
+      <button id="button3h" onclick="parseData('TYPE=RANGE&DATA=CTH&RANGE=3H');">3 hours</button>
+      <button id="button6h" onclick="parseData('TYPE=RANGE&DATA=CTH&RANGE=6H');">6 hours</button>
+      <button id="button12h" onclick="parseData('TYPE=RANGE&DATA=CTH&RANGE=12H');">12 hours</button>
+      <button id="button24h" onclick="parseData('TYPE=RANGE&DATA=CTH&RANGE=24H');">24 hours</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"> <!-- -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./css/style.css">   <!--use stylesheet ./css/style.css-->
+  </head>
+  <body id="aboutBody">
+    <script type="text/javascript">
+    function scanAboutFolder(){
+      console.log("ckeck1");
+      var getAbout = new XMLHttpRequest();
+      if(getAbout.readyState==0 || getAbout.readyState==4){
+        console.log("ckeck2");
+          getAbout.open("GET", "./language/about/about_"+parent.document.getElementById("lang-switch").value+".txt", true);
+          console.log("ckeck3");
+          getAbout.onreadystatechange = handleAboutRes;
+              getAbout.send(null);
+      }else{
+          setTimeout('scanAboutFolder',1000);
+      }
+      function handleAboutRes() {
+        if (this.readyState == 4 && this.status == 200) {
+          console.log("ckeck3");
+          document.getElementById("aboutDoc").innerHTML = this.responseText;
+          //var aboutStr = this.responseText.substring(this.responseText.indexOf("<response>")+"<response>".length,this.responseText.indexOf("</response>"));
+          //var aboutArr = JSON.parse(scanStr);
+        }else{setTimeout('scanAboutFolder',1000);}
+      }
+    }</script>
+    <section id="main">
+      <div class="container" id="aboutDoc">
+
+      </div>
+      </section>
+  </body>
+</html>
