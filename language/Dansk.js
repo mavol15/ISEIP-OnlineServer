@@ -1,7 +1,10 @@
 var langVar = 0;
+var langID = '';
+var bodyId = '';  //Defines bodyId variable to avoid compile errors
 
 function dansk(){
-var bodyId = "";  //Defines bodyId variable to avoid compile errors
+  langID = 'dk';
+
 
   //index
   thisBody = document.getElementsByTagName("body")[0].id; //Gets the body id of the calling page
@@ -34,6 +37,16 @@ var bodyId = "";  //Defines bodyId variable to avoid compile errors
     iframeObj.document.getElementById("inputDesc").innerHTML = "Skriv ny IP addresse på din lokale Sensor Boks";
   }
 
+  //Learning
+  if(bodyId == "learningBody"){
+    iframeObj.scanFolder();
+  }
+  if(bodyId == "learningScenario"){
+    ls = iframeObj.location.href;
+    if(ls.substring(ls.indexOf('index_')+6,ls.length-5) != langID){
+      iframeObj.location.href = ls.substring(0,ls.length-7)+langID+'.html';
+    }
+  }
 
   //Data
   if(bodyId == "dataBody"){                                               // checks if the iframe page is Data

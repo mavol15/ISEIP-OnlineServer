@@ -1,7 +1,9 @@
 var langVar = 0;
+var langID = '';
+var bodyId = '';
 
 function english(){
-var bodyId = "";
+  langID = 'en';
 
   //index
   thisBody = document.getElementsByTagName("body")[0].id;
@@ -35,12 +37,14 @@ var bodyId = "";
   }
 
   //Learning
-  if(bodyId == "dataBody"){
-    iframeObj.document.getElementById("button1h").innerHTML = "1 hour";
-    iframeObj.document.getElementById("button3h").innerHTML = "3 hours";
-    iframeObj.document.getElementById("button6h").innerHTML = "6 hours";
-    iframeObj.document.getElementById("button12h").innerHTML = "12 hours";
-    iframeObj.document.getElementById("button24h").innerHTML = "24 hours";
+  if(bodyId == "learningBody"){
+    iframeObj.scanFolder();
+  }
+  if(bodyId == "learningScenario"){
+    ls = iframeObj.location.href;
+    if(ls.substring(ls.indexOf('index_')+6,ls.length-5) != langID){
+      iframeObj.location.href = ls.substring(0,ls.length-7)+langID+'.html';
+    }
   }
 
   //Data

@@ -4,6 +4,10 @@ var liveStorageVar = 0;
 
 mainIframe.addEventListener("load", setLanguage);
 
+function reloadPage(){
+  document.getElementById('indexIframe').contentWindow.location.reload(true);
+}
+
 function setLanguage(){
     var lang = document.getElementById("lang-switch").value;
     switch (lang) {
@@ -16,10 +20,8 @@ function setLanguage(){
       default:
         english();
     }
+    console.log('setLanguage');
     liveLanguage();   //will be called on every iFrame load
-    if(document.getElementById('indexIframe').contentWindow.document.getElementsByTagName("body")[0].id == "learningBody"){
-    document.getElementById('indexIframe').contentWindow.scanFolder();
-  }
 }
 
 function liveLanguage(a){
@@ -35,5 +37,5 @@ function liveLanguage(a){
         default:
           liveEnglish(a);
       }
-  }else{setTimeout('liveLanguage()',100);}
+  }//else{setTimeout('liveLanguage()',100);}
 }

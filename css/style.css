@@ -25,6 +25,16 @@ body{
   float: right;
 }
 
+.error{
+  overflow:hidden;
+  font-size:75px;
+  font-weight:bold;
+}
+
+.learningLink{
+  float: right;
+}
+
 div.lowercase {
   text-transform: lowercase;
 }
@@ -182,12 +192,26 @@ div.indexFrame{
 }
 
 #boxes .box{
+
   float:left;
   text-align: center;
   width:33%;
   padding:0px;
   margin-top: -20px;
   margin-bottom: 0;
+}
+.bawks{
+  float:left;
+  margin:auto;
+  width: 25%;
+}
+.bawks2{
+  float:center;
+  padding: 100px 0;
+  text-align: center;
+  margin:auto;
+  width: 30%;
+  font-size:15px;
 }
 
 #boxes p .highlight{

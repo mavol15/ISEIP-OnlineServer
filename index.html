@@ -3,8 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="description_1">
-    <meta name="keywords" content="2imprez, study environment, green energy">
     <meta name="author" content="Lars Norge">
     <title id="title">2imprez | Home</title>
     <link rel="stylesheet" href="./css/style.css">   <!--use stylesheet ./css/style.css-->
@@ -12,7 +10,7 @@
     <!--Change Iframe Src function-->
     <script type="text/javascript"> function newSrc(dest) {document.getElementById("indexIframe").src=dest;}</script>
 
-    
+
     <style type="text/css">select {clear:both;}</style>
 
     <!--resize iframe-->
@@ -30,7 +28,7 @@
       <section id="banner">
         <!--Language options, drop-down select-->
         <div class="languageDiv">
-          <select id="lang-switch" class="languageSelect" onchange="setLanguage()">
+          <select id="lang-switch" class="languageSelect" onchange="reloadPage()">
             <option value="en" selected>English</option>
             <option value="dk">Dansk</option>
           </select>
@@ -39,10 +37,10 @@
           <!--Navigation-->
           <nav>
               <button id="home" class="button_1" onclick=newSrc("home.html");>Home</button>
-              <button id="about" class="button_1" onclick=newSrc("about.html");>About</button>
-              <button id="setup" class="button_1" onclick=newSrc("setup.html");>Setup</button>
-              <button id="dmp" class="button_1" onclick=newSrc("utility.html");>Learning</button>
+              <button id="dmp" class="button_1" onclick=newSrc("learning.html");>Learning</button>
               <button id="data" class="button_1" onclick=newSrc("data.html");>Data</button>
+              <button id="about" class="button_1" onclick=newSrc("about.html");>About</button>
+              <button id="setup" class="button_1" onclick=newSrc("404.html");>Setup</button>
           </nav>
         </div>
 
