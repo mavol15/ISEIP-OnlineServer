@@ -21,8 +21,6 @@ function createGraph(data) {
 	var tempCmeasured = ["Temp [\xB0C]"];
 	var humMeasured = ["Humidity"];
 
-
-
 	for (var i = data.length-2; i > 1; i--) {
 		dateStamp.push(data[i][0]);
 		co2measured.push(data[i][1]);
@@ -35,7 +33,6 @@ function createGraph(data) {
 		date[i] = splitDate[0];
 		time[i] = splitDate[1];
 	}
-
 
 	var chart = c3.generate({
 		bindto: '#chart',
@@ -65,4 +62,5 @@ function createGraph(data) {
 	    legend: { position: 'right'}
 	});
 }
+
 window.onload=function(){parseData('TYPE=RANGE&DATA=CTH&RANGE=1H');}

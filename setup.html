@@ -23,8 +23,13 @@
 
         //console.log(localStorage.sensorBoxAddress);
       }
-      function showThis(){
-        parent.liveLanguage(4);
+      function showAddress(){
+
+        if(localStorage.sensorBoxAddress==undefined){
+          parent.liveLanguage(5);
+        }else{
+          parent.liveLanguage(4);
+        }
       }
     </script>
     <div class="middle">
@@ -35,7 +40,7 @@
           <input id="wifiInput"></input><p id="inputDesc">Input the address of your local Sensor Box</p>
         </div>
         <button id="connectButton" onclick='saveWifi()'>Connect</button>
-        <button id="checkButton" onclick='showThis()'>Check Current Address</button>
+        <button id="checkButton" onclick='showAddress()'>Check Current Address</button>
         <p id="wrnMsg"></p>
       </div>
     </div>

@@ -13,7 +13,7 @@ function english(){
     document.getElementById("home").innerHTML = "Home";
     document.getElementById("about").innerHTML = "About";
     document.getElementById("setup").innerHTML = "Setup";
-    document.getElementById("dmp").innerHTML = "Learning";
+    document.getElementById("learning").innerHTML = "Learning";
     document.getElementById("data").innerHTML = "Data";
     document.getElementById("livedataco2").innerHTML = "CO\u2082 Level";
     document.getElementById("livedatatemp").innerHTML = "Room Temperature";
@@ -26,7 +26,7 @@ function english(){
 
   //About
   if(bodyId == "aboutBody"){
-    iframeObj.scanAboutFolder();
+    iframeObj.scanAboutFolder(langID);
   }
 
   //setup
@@ -58,7 +58,6 @@ function english(){
 }
 
 function liveEnglish(a){
-  console.log("liveEnglish");
   if(iframeObj.document.getElementsByTagName("body")[0].id == "homeBody"){
     switch (a) {
       case 1:
@@ -115,6 +114,9 @@ function liveEnglish(a){
           break;
         case 4:
           iframeObj.document.getElementById("wrnMsg").innerHTML = "Current address is set to: "+localStorage.sensorBoxAddress;
+          break;
+        case 5:
+          iframeObj.document.getElementById("wrnMsg").innerHTML = "No IP address has been saved";
           break;
         default:
           iframeObj.document.getElementById("wrnMsg").innerHTML = "";

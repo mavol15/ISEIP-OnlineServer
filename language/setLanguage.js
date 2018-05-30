@@ -1,6 +1,7 @@
 
 var mainIframe = document.getElementById('indexIframe');
-var liveStorageVar = 0;
+
+document.getElementById("lang-switch").innerHTML = '<option value="en" selected>English</option><option value="da">Dansk</option>';
 
 mainIframe.addEventListener("load", setLanguage);
 
@@ -14,14 +15,13 @@ function setLanguage(){
       case 'en':
         english();
         break;
-      case 'dk':
+      case 'da':
         dansk();
         break;
       default:
         english();
     }
-    console.log('setLanguage');
-    liveLanguage();   //will be called on every iFrame load
+    liveLanguage();   //will be called once on every iFrame load
 }
 
 function liveLanguage(a){
@@ -31,11 +31,11 @@ function liveLanguage(a){
         case 'en':
           liveEnglish(a);
           break;
-        case 'dk':
+        case 'da':
           liveDansk(a);
           break;
         default:
           liveEnglish(a);
       }
-  }//else{setTimeout('liveLanguage()',100);}
+  }
 }

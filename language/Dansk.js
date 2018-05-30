@@ -1,9 +1,9 @@
 var langVar = 0;
 var langID = '';
-var bodyId = '';  //Defines bodyId variable to avoid compile errors
+var bodyId = '';  //Defines variables to avoid compile errors
 
 function dansk(){
-  langID = 'dk';
+  langID = 'da';
 
 
   //index
@@ -14,7 +14,7 @@ function dansk(){
     document.getElementById("home").innerHTML = "Hjem";
     document.getElementById("about").innerHTML = " Om ";
     document.getElementById("setup").innerHTML = "Opsætning";
-    document.getElementById("dmp").innerHTML = "Læring";
+    document.getElementById("learning").innerHTML = "Læring";
     document.getElementById("data").innerHTML = "Data";
     document.getElementById("livedataco2").innerHTML = "CO\u2082 Niveau";
     document.getElementById("livedatatemp").innerHTML = "Rum Temperatur";
@@ -27,7 +27,7 @@ function dansk(){
 
   //About
   if(bodyId == "aboutBody"){
-    iframeObj.scanAboutFolder();
+    iframeObj.scanAboutFolder(langID);
   }
 
     //setup
@@ -59,7 +59,6 @@ function dansk(){
 }
 
 function liveDansk(a){
-  console.log("liveDansk");
   if(iframeObj.document.getElementsByTagName("body")[0].id == "homeBody"){
     switch (a) {
       case 1:

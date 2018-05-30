@@ -7,24 +7,18 @@
   </head>
   <body id="aboutBody">
     <script type="text/javascript">
-    function scanAboutFolder(){
-      console.log("ckeck1");
+    function scanAboutFolder(a){
       var getAbout = new XMLHttpRequest();
       if(getAbout.readyState==0 || getAbout.readyState==4){
-        console.log("ckeck2");
-          getAbout.open("GET", "./language/about/about_"+parent.document.getElementById("lang-switch").value+".txt", true);
-          console.log("ckeck3");
+          getAbout.open("GET", "./language/about/about_"+a+".txt", true);
           getAbout.onreadystatechange = handleAboutRes;
               getAbout.send(null);
-      }else{
-          setTimeout('scanAboutFolder',1000);
+      }else{setTimeout('scanAboutFolder',1000);
       }
+
       function handleAboutRes() {
         if (this.readyState == 4 && this.status == 200) {
-          console.log("ckeck3");
           document.getElementById("aboutDoc").innerHTML = this.responseText;
-          //var aboutStr = this.responseText.substring(this.responseText.indexOf("<response>")+"<response>".length,this.responseText.indexOf("</response>"));
-          //var aboutArr = JSON.parse(scanStr);
         }else{setTimeout('scanAboutFolder',1000);}
       }
     }</script>

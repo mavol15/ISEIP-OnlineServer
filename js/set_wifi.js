@@ -2,8 +2,6 @@ var xmlHttp = new XMLHttpRequest();       //createXmlHttpRequestObject();
 
 function getWifiInfo(){
   if(xmlHttp.readyState==0 || xmlHttp.readyState==4){
-      //BeagleBone standard IP adress: http://192.168.7.2/
-      //current beaglebone server on SDU-Guest: http://10.125.72.17/
       xmlHttp.open("GET", "http://10.125.72.17/getWifiInfo.php", true);
       xmlHttp.onreadystatechange = handleServerRes;
           xmlHttp.send(null);
@@ -14,9 +12,7 @@ function getWifiInfo(){
 
 function handleServerRes() {
 if (this.readyState == 4 && this.status == 200) {
-    //console.log(this.responseText);
     var jsonStr = this.responseText.substring(this.responseText.indexOf("<response>")+"<response>".length,this.responseText.indexOf("</response>"));
-    //console.log(jsonStr);
     var jsonArr = JSON.parse(jsonStr);
     console.log(jsonArr);
 
@@ -55,7 +51,7 @@ if (this.readyState == 4 && this.status == 200) {
       }
       passWifi = passWifi+'</a>';
 
-    } //console.log(passWifi);
+    }
 /*Insert Tab into HTML location*/
     document.getElementById("list-tab").innerHTML = passWifi;
     }
@@ -64,13 +60,11 @@ if (this.readyState == 4 && this.status == 200) {
 
 function setWifi(wifi,prot, passId){
   if(xmlHttp.readyState==0 || xmlHttp.readyState==4){
-      //current beaglebone server: http://10.125.72.17/
       if(prot=="none"){
         var send = "http://10.125.72.17/setWifi.php?wifi_str="+wifi+"&protocol="+prot;
       }else{
         var passw = document.getElementById("wifiIn"+passId).value;
         var send = "http://10.125.72.17/setWifi.php?wifi_str="+wifi+"&protocol="+prot+"&password="+passw;}
-      console.log(send);
       xmlHttp.open("GET", send, true);
       xmlHttp.onreadystatechange = handleServerRes2;
           xmlHttp.send(null);

@@ -11,7 +11,7 @@
       <div class="middle"><div class="outer2"><div class="row" id="divy"></div></div></div>
       <script type="text/javascript">
 
-        var xmlHttp = new XMLHttpRequest();       //createXmlHttpRequestObject();
+        var folderContent = new XMLHttpRequest();       //createXmlHttpRequestObject();
         var descText = new XMLHttpRequest();       //createXmlHttpRequestObject();
         var newHeader = new XMLHttpRequest();
         var idNum;
@@ -21,10 +21,10 @@
         function scanFolder(){
           idNum = 0;
           idNum2 = 0;
-          if(xmlHttp.readyState==0 || xmlHttp.readyState==4){
-              xmlHttp.open("GET", "learning.php", true);
-              xmlHttp.onreadystatechange = handlelearningRes;
-                  xmlHttp.send(null);
+          if(folderContent.readyState==0 || folderContent.readyState==4){
+              folderContent.open("GET", "learning.php", true);
+              folderContent.onreadystatechange = handlelearningRes;
+                  folderContent.send(null);
           }else{
               setTimeout('scanFolder',1000);
           }
@@ -75,7 +75,6 @@
           }
         }
 
-
         function readHeader(){
           if(newHeader.readyState==0 || newHeader.readyState==4){
               newHeader.open("GET", "./learning/"+arr[idNum]+"/header_"+parent.document.getElementById('lang-switch').value+".txt", true);
@@ -112,13 +111,6 @@
               else{return null;}
           }
         }
-      </script>
-      <script>
-
-
-
-
-
       </script>
     </div>
   </body>

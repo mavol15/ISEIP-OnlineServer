@@ -1,55 +1,60 @@
 <!DOCTYPE html>
-<html dir="ltr"> <!-- Beaglebone local address: 192.168.7.2 -->
+<html dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta name="author" content="Lars Norge">
-    <title id="title">2imprez | Home</title>
+    <title id="title"></title>
     <link rel="stylesheet" href="./css/style.css">   <!--use stylesheet ./css/style.css-->
 
-    <!--Change Iframe Src function-->
-    <script type="text/javascript"> function newSrc(dest) {document.getElementById("indexIframe").src=dest;}</script>
-
-
-    <style type="text/css">select {clear:both;}</style>
+    <!--Change Iframe Src-->
+    <script type="text/javascript">
+      function newSrc(dest) {
+        document.getElementById("indexIframe").src=dest;
+      }
+    </script>
+    <!--<style type="text/css">select {clear:both;}</style>-->
 
     <!--resize iframe-->
-    <script>function resizeIframe(obj) {obj.style.height = window.innerHeight - document.getElementById("header").offsetHeight - document.getElementById("footer").offsetHeight + 'px';}</script>
+    <script>
+      function resizeIframe(obj) {
+        obj.style.height = window.innerHeight - document.getElementById("header").offsetHeight - document.getElementById("footer").offsetHeight + 'px';
+      }
+    </script>
 
-    <!--Languages-->
+    <!--Initialize AJAX-->
     <script type="text/javascript" src="jquery/jquery-3.3.1.js"></script>
+
+    <!--define language locations-->
     <script type="text/javascript" src="language/Dansk.js"></script>
     <script type="text/javascript" src="language/English.js"></script>
 
   </head>
-  <body id="indexBody" onload="recursiveSensor()">
+  <body id="indexBody" onload="recursiveSensorCall()">
     <header id="header">
       <!--banner-->
       <section id="banner">
         <!--Language options, drop-down select-->
         <div class="languageDiv">
           <select id="lang-switch" class="languageSelect" onchange="reloadPage()">
-            <option value="en" selected>English</option>
-            <option value="dk">Dansk</option>
           </select>
         </div>
         <div class="container">
           <!--Navigation-->
           <nav>
               <button id="home" class="button_1" onclick=newSrc("home.html");>Home</button>
-              <button id="dmp" class="button_1" onclick=newSrc("learning.html");>Learning</button>
+              <button id="learning" class="button_1" onclick=newSrc("learning.html");>Learning</button>
               <button id="data" class="button_1" onclick=newSrc("data.html");>Data</button>
               <button id="about" class="button_1" onclick=newSrc("about.html");>About</button>
-              <button id="setup" class="button_1" onclick=newSrc("404.html");>Setup</button>
+              <button id="setup" class="button_1" onclick=newSrc("setup.html");>Setup</button>
           </nav>
         </div>
 
       </section>
-    </header><!--
+    </header>
 
-    --><div class="indexFrame"><!--
-    --><iframe id="indexIframe" src="home.html" frameborder="0" border="0" cellspacing="0" onload="resizeIframe(this)"></iframe>
-
+    <div class="indexFrame">
+      <iframe id="indexIframe" src="home.html" frameborder="0" border="0" cellspacing="0" onload="resizeIframe(this)"></iframe>
     </div>
 
     <footer id="footer">
